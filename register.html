@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"><link rel="shortcut icon" type="image/x-icon" href="car image\favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f503d7952.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src="login.js" type="text/javascript"></script>
+    <title>HW Car</title>
+  </head>
+  <body>
+    <section id ="title">
+  <div class="container_fluid">
+    <nav class="navbar navbar-expand-md bg-info bg-body-tertiary nv">
+    <a class="navbar-brand mb-0 h1" href="index.html">HW Car</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu1" aria-controls="#menu1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="menu1">
+      <ul class="navbar-nav ms-auto">
+          <li>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </li>
+          <br>
+          <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
+          <li class="nav-item"><a class="nav-link" href="Booking.html">Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="Fav.html">Favourite<i class="fa-regular fa-heart zero"></i><span id="cartdisplay">0</span></a></li>
+      </ul>
+    </div>
+    </nav>
+</div>
+<hr>
+    <section id="loginregister">
+
+
+            <div class="createacc">
+              <h1 style="text-align:center;" >Create Account</h1>
+
+              <div class="row container">
+      <div class="col-lg-3 pad">
+        <label>Username :</label>
+      </div>
+      <div class="col-lg-9 pad">
+        <input type="text" name="name" id="name" value="" onfocus="focusme(this)" onblur="blurme(this)" id="nametxt" onmouseover="focusme(this)" onmouseout="blurme(this)" minlength="3"  maxlength="15" placeholder="Username">
+
+      </div>
+      <div class="col-lg-3 pad">
+        <label>Email :</label>
+
+      </div>
+      <div class="col-lg-9 pad">
+        <input type="email" name="email" value="" id="emailtxt" onfocus="focusme(this)" onblur="blurme(this)" onmouseover="focusme(this)" onmouseout="blurme(this)" required placeholder="✉">
+
+      </div>
+      <div class="col-lg-3 pad">
+        <label>Password :</label>
+
+
+      </div>
+      <div class="col-lg-9 pad">
+        <input type="password" name="password" value="" id="password" onfocus="focusme(this)" onInput="check()" required placeholder="password">
+        <span class="eye"><i id="see" onclick="see()" class="fa-sharp fa-solid fa-eye eye"></i></span>
+        <div id="check0" >
+          <i class="far fa-check-circle"></i> <span>Length more than 8</span>
+        </div>
+        <div id="check1">
+          <i class="far fa-check-circle"></i> <span>Must include numerical number 0-9</span>
+        </div>
+        <div id="check2">
+          <i  class="far fa-check-circle"></i> <span>Must include special character !@#$%^&*()</span>
+        </div>
+        <div id="check3">
+          <i  class="far fa-check-circle"></i> <span>No spaces included</span>
+        </div>
+      </div>
+      <div class="col-lg-3 pad">
+        <label>Confirm-Password :</label>
+      </div>
+      <div class="col-lg-9 pad">
+        <input type="password" name="password" value="" id="con-password" onfocus="focusme(this)"  onInput="checkpass()" required placeholder="confirm-password">
+      <span class="eye1"><i id="see1" onclick="see1()" class="fa-sharp fa-solid fa-eye eye"></i></span>
+        <div id="checkp" >
+          <i class="far fa-check-circle"></i> <span>Password-Match</span>
+        </div>
+      </div>
+      <div class="col-lg-3 pad">
+        <label>Phone Number :</label>
+
+      </div>
+      <div class="col-lg-9 pad">
+        <input type="text" id="phone1" name="" value="" size="3" onfocus="focusme(this)"  onmouseover="focusme(this)" onmouseout="blurme(this)" pattern="[0-9]{3}" required placeholder="01x">
+        <span>-</span><input type="text" id="phone2" name="" value="" size="8"onfocus="focusme(this)" onblur="blurme(this)" onmouseover="focusme(this)" onmouseout="blurme(this)" required placeholder="1234567">
+
+      </div>
+      <div class="col-lg-3 pad">
+        <label>Gender :</label>
+
+      </div>
+      <div class="col-lg-9 pad">
+        <select id="select" name="" onfocus="focusme(this)" onblur="blurme(this)"  required>
+          <option value="" selected>.......</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+
+        </select>
+
+      </div>
+      <div class="col-lg-3 pad">
+        <label>Date of Birth :</label>
+
+      </div>
+      <div class="col-lg-9 pad">
+        <input type="date" name="" value="" onfocus="focusme(this)" onblur="blurme(this)"required>
+
+      </div>
+
+      <div class="col-lg-3">
+
+      </div>
+      <div class="col-lg-9 pad">
+        <button class="button" type="submit" name="button" value="submit" onclick="checkValidation1()">Submit</button>
+
+
+      </div>
+
+
+
+    </div>
+
+    <div class="col-lg-4" id="center">
+      <div class="container">
+         <a href="#" class='exit' onclick="toggle2()">X</a>
+         <p></p>
+         <img src="Images\tick.jpg" alt="" class="tick">
+         <div class="text back"><h1>Thank You</h1></div>
+
+            <div class="data">
+               <h4>You have successfully create an account !</h4>
+
+            </div>
+    <div class="data">
+      
+
+    </div>
+
+            <div class="btn">
+               <div class="inner"></div>
+              <a href="login.html"><button class='btn2' type="submit">Back to Login</button></a>
+            </div>
+
+
+    </div>
+    </div>
+
+    </section>
+  </body>
+</html>
